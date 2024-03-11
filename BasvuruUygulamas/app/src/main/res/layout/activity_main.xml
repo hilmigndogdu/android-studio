@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/gaziLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/image9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.30" />
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ttitillium"
+        android:text="Gazi Üniversitesi Lisansüstü Başvuru Ekranı"
+        android:textColor="@color/gaziMavisi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gaziLogo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/welcomeTxt"
+        app:layout_constraintStart_toStartOf="@id/welcomeTxt"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="İsim Soyisim"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorHint="@color/darkCyan"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/egitimDurumuRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/nameEdtLay"
+        app:layout_constraintStart_toStartOf="@id/nameEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/notOrtalamasıSwtc">
+
+        <RadioButton
+            android:id="@+id/liseRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lise"
+            android:textColor="@color/gaziMavisi"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/lisansRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lisans"
+            android:textColor="@color/gaziMavisi"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/yuksekLisansRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yüksek Lisans"
+            android:textColor="@color/gaziMavisi"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bolumEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/egitimDurumuRadioGroup"
+        app:layout_constraintStart_toStartOf="@+id/egitimDurumuRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/egitimDurumuRadioGroup">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bolumEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Bölüm"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/onurBelgesiChk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Onur Belgesi Aldım"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/bolumEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/bolumEdtLay" />
+
+    <CheckBox
+        android:id="@+id/ogrenciGruplariChk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Öğrenci Gruplarına Katıldım"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/onurBelgesiChk"
+        app:layout_constraintTop_toBottomOf="@id/onurBelgesiChk" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/notOrtalamasıSwtc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:text="Not Ortalamam 2.5'un üstünde"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ogrenciGruplariChk"
+        app:layout_constraintTop_toBottomOf="@+id/nameEdtLay"
+        app:switchPadding="10dp" />
+
+    <TextView
+        android:id="@+id/sonucTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ttitillium"
+        android:text="Hesaplanan Basvuru Puanınız: Kriterlere Uygun Degil"
+        android:textColor="@color/gaziMavisi"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/notOrtalamasıSwtc"
+        app:layout_constraintStart_toStartOf="@id/notOrtalamasıSwtc"
+        app:layout_constraintTop_toBottomOf="@id/ogrenciGruplariChk"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

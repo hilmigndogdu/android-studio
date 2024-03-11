@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KayitActivity"
+    android:background="@color/turuncu">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:hintTextColor="@color/koyubeyaz"
+        android:textColorHint="@color/koyubeyaz"
+        android:background="@color/mor">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="İsim Soyisim"
+            android:fontFamily="@font/oswaldbold"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEdtLay"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:hintTextColor="@color/koyubeyaz"
+        android:textColorHint="@color/koyubeyaz"
+        android:background="@color/mor">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Kullanıcı Adı"
+            android:fontFamily="@font/oswaldbold"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/birthEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameEdtLay"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:hintTextColor="@color/koyubeyaz"
+        android:textColorHint="@color/koyubeyaz"
+        android:background="@color/mor">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/birthEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Doğum Tarihi"
+            android:inputType="datetime"
+            android:fontFamily="@font/oswaldbold"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthEdtLay"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:hintTextColor="@color/koyubeyaz"
+        android:textColorHint="@color/koyubeyaz"
+        android:background="@color/mor">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Şifre"
+            android:inputType="textPassword"
+            android:fontFamily="@font/oswaldbold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signupBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/passwordEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/passwordEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/passwordEdtLay"
+        android:layout_marginTop="20dp"
+        android:text="Kayıt Ol"
+        android:fontFamily="@font/oswaldbold"
+        android:textColor="@color/koyubeyaz"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
