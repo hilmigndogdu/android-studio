@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/healtyTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Sağlıklı"
+        android:textAlignment="center"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintVertical_bias="0.15"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange_dark"
+        />
+
+    <TextView
+        android:id="@+id/liveTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/healtyTxt"
+        android:text="Yaşa!"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/liveTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.65"
+        android:layout_marginTop="30dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Kullanıcı Adı"
+            android:maxLength="12"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/usernameEdtLay"
+        app:layout_constraintStart_toStartOf="@id/usernameEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/usernameEdtLay"
+        android:layout_marginTop="30dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Şifre"
+            android:maxLength="12"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giriş Yap"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/passwordEdtLay"
+        app:layout_constraintStart_toStartOf="@id/passwordEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/passwordEdtLay"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/notmemberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signupTxt"
+        android:layout_marginTop="20dp"
+        android:text="Üye değil misin?"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/signupTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/notmemberTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/notmemberTxt"
+        android:text="Kayıt ol!"
+        android:textColor="@color/light_blue"
+        app:layout_constraintHorizontal_weight="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

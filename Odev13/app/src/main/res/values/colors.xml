@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange_dark">#fb8500</color>
+    <color name="orange_light">#ffb703</color>
+    <color name="navy_blue">#023047</color>
+    <color name="light_blue">#219ebc</color>
+    <color name="cloud_blue">#8ecae6</color>
+    <color name="turquoise">#00b4d8</color>
+    <color name="broken_white">#e5e5e5</color>
+    <color name="patrol_green">#0a9396</color>
+    <color name="dark_patrol_green">#005f73</color>
+    <color name="red">#d62828</color>
+</resources>

@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Odev13" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/orange_dark</item>
+        <item name="colorAccent">@color/navy_blue</item>
+        <item name="colorSecondary">@color/orange_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorError">@color/red</item>
+        <item name="fontFamily">@font/comfortaa</item>
+</style>
+
+
+    <style name="Theme.Odev13" parent="Base.Theme.Odev13" />
+</resources>

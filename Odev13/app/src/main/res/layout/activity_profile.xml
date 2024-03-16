@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textViewLinearLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/myProfileTxt"
+        android:paddingVertical="15dp"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/myUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kullanıcı Adı: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            />
+        <TextView
+            android:id="@+id/yasTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yaş: "
+            app:layout_constraintStart_toStartOf="@id/myUsernameTxt"
+            app:layout_constraintTop_toBottomOf="@id/myUsernameTxt"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="20dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/myProfileTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profilim"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/kiloEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewLinearLay"
+        app:layout_constraintStart_toStartOf="@id/textViewLinearLay"
+        app:layout_constraintEnd_toEndOf="@id/textViewLinearLay"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_marginTop="15dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kiloEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Kilo (KG)"
+            android:inputType="number"
+            android:maxLength="3"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/boyEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/kiloEdtLay"
+        app:layout_constraintStart_toStartOf="@id/kiloEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/kiloEdtLay"
+        android:layout_marginTop="15dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/boyEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="3"
+            android:hint="Boy (cm)"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/vkiTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/boyEdtLay"
+        app:layout_constraintStart_toStartOf="@id/boyEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/boyEdtLay"
+        android:text="Vücut Kitle İndeksi (VKİ): "
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/showBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Göster"
+        app:layout_constraintTop_toBottomOf="@id/vkiTxt"
+        app:layout_constraintStart_toStartOf="@id/vkiTxt"
+        android:layout_marginTop="50dp"
+        app:layout_constraintWidth_percent="0.4"
+        />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Güncelle"
+        app:layout_constraintTop_toTopOf="@id/showBtn"
+        app:layout_constraintEnd_toEndOf="@id/vkiTxt"
+        app:layout_constraintWidth_percent="0.4"
+        />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bilgileri Sil"
+        app:layout_constraintTop_toBottomOf="@id/showBtn"
+        app:layout_constraintEnd_toEndOf="@id/vkiTxt"
+        android:layout_marginTop="15dp"
+        app:layout_constraintWidth_percent="0.4"
+        />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="VKİ Hesapla"
+        app:layout_constraintTop_toBottomOf="@id/showBtn"
+        app:layout_constraintStart_toStartOf="@id/vkiTxt"
+        android:layout_marginTop="15dp"
+        app:layout_constraintWidth_percent="0.4"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
