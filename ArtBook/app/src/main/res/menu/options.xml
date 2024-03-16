@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <item android:id="@+id/addTravel" android:title="Add Travel" app:showAsAction="never"/>
-    <item android:id="@+id/deleteTravel" android:title="Delete Travel" app:showAsAction="never"/>
-
-</menu>
