@@ -36,7 +36,7 @@
             android:text="Yaş: "
             app:layout_constraintStart_toStartOf="@id/myUsernameTxt"
             app:layout_constraintTop_toBottomOf="@id/myUsernameTxt"
-            android:textSize="18sp"
+            android:textSize="20dp"
             android:textStyle="bold|italic"
             android:layout_marginTop="20dp"
             />
@@ -91,7 +91,7 @@
             android:layout_height="match_parent"
             android:inputType="number"
             android:maxLength="3"
-            android:hint="Boy (cm)"
+            android:hint="Boy (cm)(-100cm eksik giriniz)"
             />
     </com.google.android.material.textfield.TextInputLayout>
 

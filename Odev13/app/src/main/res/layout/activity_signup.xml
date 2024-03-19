@@ -105,7 +105,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/boySeekBar"
         app:layout_constraintStart_toStartOf="@id/yasEdtLay"
-        android:text="Boy (cm) "
+        android:text="Boy (cm)"
         app:layout_constraintBottom_toBottomOf="@id/boySeekBar"
         />
 
